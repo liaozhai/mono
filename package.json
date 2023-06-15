@@ -1,0 +1,12 @@
+{
+  "name": "mono",
+  "packageManager": "yarn@3.5.0",
+  "private": true,
+  "scripts": {
+    "build": "yarn workspaces foreach run build",
+    "dev": "yarn workspace site dev"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

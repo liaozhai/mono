@@ -1,0 +1,11 @@
+:root {
+    font-size: calc(.5em + 1vw);
+    font-family: sans-serif;
+}
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+.checkbox {
+    font-size: .8rem;    
+}
