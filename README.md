@@ -1,0 +1,2 @@
+# mono
+A monorepo example
