@@ -9,3 +9,9 @@ html, body {
 .checkbox {
     font-size: .8rem;    
 }
+.checkbox span {
+    color: lightslategray;
+}
+.c-tabs .pages c-page > * {
+    display: block;
+}

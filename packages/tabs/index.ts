@@ -66,6 +66,7 @@ class Tabs extends HTMLElement {
             }
             else {
                 t.classList.remove('selected');
+                p.classList.remove('selected');
                 p.classList.add('hidden');
             }
         }

@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "build": "yarn workspaces foreach run build",
-    "dev": "yarn workspace site dev"
+    "dev": "yarn workspace site dev",
+    "preview": "yarn workspace site preview"
   },
   "workspaces": [
     "packages/*"
