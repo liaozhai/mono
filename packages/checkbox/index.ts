@@ -58,7 +58,7 @@ class Checkbox extends HTMLElement {
         }
         .checkbox > .box {
             margin-right: 0.3em;
-        }        
+        }
         `;
         this.appendChild(style);
         
