@@ -15,3 +15,10 @@ html, body {
 .c-tabs .pages c-page > * {
     display: block;
 }
+.c-tabs .tabs label {
+    padding: .3em;
+}
+.c-tabs .tabs .selected {
+    background-color: darkblue;
+    color: white;
+}

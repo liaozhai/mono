@@ -11,14 +11,10 @@ class Tabs extends HTMLElement {
     connectedCallback() {
         let style = document.createElement('style');
         style.textContent = `
-        .tabs label {
-            padding: 0.3em;
+        .c-tabs .tabs > * {
+            vertical-align: middle;
         }
-        .tabs .selected {
-            background-color: lightslategray;
-            color: white;
-        }
-        .pages .hidden {
+        .c-tabs .pages .hidden {
             display: none;
         }        
         `;
@@ -60,12 +56,12 @@ class Tabs extends HTMLElement {
             const t = tabs[i];
             const p = pages[i];
             if (i === this._selected) {
-                t.classList.add('selected');
+                t.setAttribute('selected', '');
                 p.classList.remove('hidden');
                 p.classList.add('selected');
             }
             else {
-                t.classList.remove('selected');
+                t.removeAttribute('selected');
                 p.classList.remove('selected');
                 p.classList.add('hidden');
             }

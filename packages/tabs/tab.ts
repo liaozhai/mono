@@ -5,6 +5,13 @@ class Tab extends HTMLElement {
         super();        
     }
     connectedCallback() {
+        let style = document.createElement('style');
+        style.textContent = `
+        .c-tabs label {
+            display: inline-block;
+        }
+        `;
+        this.appendChild(style);
         this.appendChild(this._label);
         this.label = this.getAttribute('label') || '';
     }
@@ -16,7 +23,7 @@ class Tab extends HTMLElement {
             case 'label':
                 this.label = newValue;
                 break;
-            case 'checked':
+            case 'selected':
                 this.selected = newValue?.toLowerCase() === 'true' || newValue === '';
                 break;     
             default:
@@ -35,6 +42,12 @@ class Tab extends HTMLElement {
     }
     set selected(selected) {
         this._selected = selected;
+        if (this._selected) {
+            this._label.classList.add('selected');
+        }
+        else {
+            this._label.classList.remove('selected');
+        }
     }
 }
 
