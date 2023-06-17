@@ -5,11 +5,12 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@components/checkbox@workspace:*, @components/checkbox@workspace:packages/checkbox":
-  version: 0.0.0-use.local
-  resolution: "@components/checkbox@workspace:packages/checkbox"
-  languageName: unknown
-  linkType: soft
+"@components/checkbox@liaozhai/components#workspace=checkbox":
+  version: 1.0.0
+  resolution: "@components/checkbox@https://github.com/liaozhai/components.git#workspace=checkbox&commit=46ee8b1eea1ec06962cf18f4d7edca5aa684780b"
+  checksum: 149aa51133915515873aa4de684055cf22e5756959a5facb3e002db8274a0930b12ecf6c7e4dc5b282ce86bc36dc0566691ef2694f18a6497c87ff9a3132d58e
+  languageName: node
+  linkType: hard
 
 "@components/tabs@workspace:*, @components/tabs@workspace:packages/tabs":
   version: 0.0.0-use.local
@@ -1203,7 +1204,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "site@workspace:packages/site"
   dependencies:
-    "@components/checkbox": "workspace:*"
+    "@components/checkbox": "liaozhai/components#workspace=checkbox"
     "@components/tabs": "workspace:*"
     typescript: ^5.1.3
     vite: ^4.3.9

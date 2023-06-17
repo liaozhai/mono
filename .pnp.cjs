@@ -16,10 +16,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:."\
       },\
       {\
-        "name": "@components/checkbox",\
-        "reference": "workspace:packages/checkbox"\
-      },\
-      {\
         "name": "site",\
         "reference": "workspace:packages/site"\
       },\
@@ -31,7 +27,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "enableTopLevelFallback": true,\
     "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
     "fallbackExclusionList": [\
-      ["@components/checkbox", ["workspace:packages/checkbox"]],\
       ["@components/tabs", ["workspace:packages/tabs"]],\
       ["mono", ["workspace:."]],\
       ["site", ["workspace:packages/site"]]\
@@ -48,12 +43,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@components/checkbox", [\
-        ["workspace:packages/checkbox", {\
-          "packageLocation": "./packages/checkbox/",\
+        ["https://github.com/liaozhai/components.git#workspace=checkbox&commit=46ee8b1eea1ec06962cf18f4d7edca5aa684780b", {\
+          "packageLocation": "./.yarn/cache/@components-checkbox-https-d7aaaf3acd-149aa51133.zip/node_modules/@components/checkbox/",\
           "packageDependencies": [\
-            ["@components/checkbox", "workspace:packages/checkbox"]\
+            ["@components/checkbox", "https://github.com/liaozhai/components.git#workspace=checkbox&commit=46ee8b1eea1ec06962cf18f4d7edca5aa684780b"]\
           ],\
-          "linkType": "SOFT"\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["@components/tabs", [\
@@ -1364,7 +1359,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/site/",\
           "packageDependencies": [\
             ["site", "workspace:packages/site"],\
-            ["@components/checkbox", "workspace:packages/checkbox"],\
+            ["@components/checkbox", "https://github.com/liaozhai/components.git#workspace=checkbox&commit=46ee8b1eea1ec06962cf18f4d7edca5aa684780b"],\
             ["@components/tabs", "workspace:packages/tabs"],\
             ["typescript", "patch:typescript@npm%3A5.1.3#~builtin<compat/typescript>::version=5.1.3&hash=85af82"],\
             ["vite", "virtual:45d07f2b44a30da418ff9b6d56677e25b9ee0f4e3b5a664efaae41f0a18a7f014d44e39df461f64c9df8a80f15ad4fa47d224ae92b9a846c18cd887c97b4838b#npm:4.3.9"]\
